@@ -35,6 +35,7 @@ int main() {
     else {
         cout<<"NO";
     }
+    cout<<sum;
 
 
     return 0;
