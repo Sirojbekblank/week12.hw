@@ -15,6 +15,9 @@ int main() {
         v.push_back(empty);
     }
     int t =v.size();
+    if(t==1 && v[0]=='0') {
+        sum++;
+    }
     if(t>1) {
         if(v[1]=='0' && v[0]=='0') {
             v[0]='1';
@@ -37,6 +40,5 @@ int main() {
     else {
         cout<<"NO";
     }
-
     return 0;
 }
