@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     int n;
     cin>>n;
-    int sum=0,t=-1;
+    int sum=0,t=0;
     char empty;
     vector<char> v;
     while(cin>>empty && empty!='!') {
@@ -19,13 +19,13 @@ int main() {
         v[0]='1';
         sum++;
     }
-    for(int i=1;i<t-1;i++) {
+    for(int i=1;i<t-2;i++) {
         if(v[i-1]=='0' && v[i]=='0' && '0'==v[i+1]) {
             v[i]='1';
             sum++;
         }
     }
-    if(v[t-1]=='0' && v[t]=='0') {
+    if(v[t-2]=='0' && v[t-1]=='0') {
         v[t]='1';
         sum++;
     }
