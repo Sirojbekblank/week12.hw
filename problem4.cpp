@@ -11,22 +11,21 @@ int main() {
     int sum=0,t=0;
     char empty;
     vector<char> v;
-    while(empty!='!') {
-        cin>>empty;
+    while(cin>>empty && empty!='!') {
         v.push_back(empty);
         t++;
     }
-    if(v[1]=='0') {
+    if(v[1]=='0' && v[0]=='0') {
         v[0]='1';
         sum++;
     }
     for(int i=1;i<t-1;i++) {
-        if(v[i-1]=='0' && '0'==v[i+1]) {
+        if(v[i-1]=='0' && v[i]=='0' && '0'==v[i+1]) {
             v[i]='1';
             sum++;
         }
     }
-    if(v[t-1]=='0') {
+    if(v[t-1]=='0' && v[t]=='0') {
         v[t]='1';
         sum++;
     }
